@@ -1,21 +1,24 @@
-<% if notice.present? %>
-  <p class="py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline" id="notice"><%= notice %></p>
-<% end %>
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline" id="notice"><%= notice %></p>
+    <% end %>
 
-<p class="my-5">
-  <strong class="block font-medium mb-1">Name</strong>
-  <%= @post.name %>
-</p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Name</strong>
+      <%= @post.name %>
+    </p>
 
-<p class="my-5">
-  <strong class="block font-medium mb-1">Title</strong>
-  <%= @post.title %>
-</p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Title</strong>
+      <%= @post.title %>
+    </p>
 
-<p class="my-5">
-  <strong class="block font-medium mb-1">Content</strong>
-  <%= @post.content %>
-</p>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Content</strong>
+      <%= @post.content %>
+    </p>
 
-<%= link_to 'Edit', edit_post_path(@post), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-<%= link_to 'Back', posts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit', edit_post_path(@post), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Back', posts_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %></div>
+</div>
