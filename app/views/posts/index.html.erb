@@ -1,11 +1,14 @@
-<div>
+<div class="w-full">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
 
-  <h1 class="text-lg font-bold text-4xl">Posts</h1>
+  <div class="flex justify-between items-center">
+    <h1 class="text-lg font-bold text-4xl">Posts</h1>
+    <%= link_to 'New Post', new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+  </div>
 
-  <table>
+  <table class="min-w-full">
     <thead class="border-b-2 border-gray-200">
     <tr class="text-gray-500 uppercase text-left">
       <th class="pt-6 pb-2 font-normal">Name</th>
@@ -28,8 +31,4 @@
     <% end %>
     </tbody>
   </table>
-
-  <br>
-
-  <%= link_to 'New Post', new_post_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium" %>
 </div>
